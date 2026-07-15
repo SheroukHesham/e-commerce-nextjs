@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Inter } from "next/font/google";
 import { cookies } from "next/headers";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import Navbar from "@/components/Navbar";
 import StoreProvider from "./StoreProvider";
 import { ICart } from "./lib/features/cartSlice";
+import InternetStatusProvider from "./providers/InternetStatusProvider";
 
 const parseCartCookie = (raw: string | undefined): ICart[] => {
   if (!raw) return [];
@@ -52,14 +52,16 @@ export default async function RootLayout({
         className="min-h-full flex flex-col bg-background"
       >
         <StoreProvider initialToken={token} initialCart={cart}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            {children}
-          </ThemeProvider>
+          <InternetStatusProvider>
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="system"
+              enableSystem
+              disableTransitionOnChange
+            >
+              {children}
+            </ThemeProvider>
+          </InternetStatusProvider>
         </StoreProvider>
       </body>
     </html>
