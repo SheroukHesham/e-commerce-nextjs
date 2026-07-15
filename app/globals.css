@@ -12,7 +12,7 @@
   --secondary: hsl(38, 93%, 57%);
   --primary-foreground: hsl(0, 0%, 100%);
   --secondary-foreground: hsl(38, 13%, 13%);
-  --muted: hsl(129, 38%, 25%);
+  --muted: hsl(220, 13%, 91%);
   --destructive: hsl(359, 100%, 38%);
   --popover: hsl(0, 0%, 90%);
 }
@@ -25,7 +25,7 @@
   --secondary: hsl(38, 93%, 57%);
   --primary-foreground: hsl(0, 0%, 100%);
   --secondary-foreground: hsl(0, 0%, 100%);
-  --muted: hsl(129, 38%, 25%);
+  --muted: hsl(220, 13%, 91%);
   --destructive: hsl(359, 100%, 38%);
   --popover: hsl(0, 0%, 90%);
 }

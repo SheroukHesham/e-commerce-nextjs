@@ -17,7 +17,7 @@ export async function getProducts() {
 export default async function Home() {
   const products: IProduct[] = await getProducts();
 
-  const renderProducts = products.map((product, idx) => {
+  const renderProducts = products?.map((product, idx) => {
     return <ProductCard product={product} key={idx} />;
   });
 

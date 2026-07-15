@@ -24,7 +24,7 @@ const data = {
     },
     {
       title: "Products",
-      url: "#",
+      url: "/dashboard/products",
       isActive: false,
     },
     {

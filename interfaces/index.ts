@@ -1,5 +1,5 @@
 export interface IProduct {
-  documentId: string;
+  documentId?: string;
   title: string;
   brand: string;
   description: string;
@@ -12,12 +12,15 @@ export interface IProduct {
   };
 }
 
-export interface ILogin {
+interface IForm {
   label: string;
-  name: "email" | "password";
   id: string;
   type: string;
-  placeholder: string;
+  placeholder?: string;
+}
+
+export interface ILogin extends IForm {
+  name: "email" | "password";
 }
 
 export interface IUser {
@@ -27,4 +30,9 @@ export interface IUser {
     username: string;
     email: string;
   };
+}
+
+export interface IEditProduct extends IForm {
+  name: keyof IProduct;
+  disabled?: boolean;
 }
