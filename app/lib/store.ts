@@ -1,9 +1,8 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import { createWrapper } from "next-redux-wrapper";
 import userReducer from "./features/userSlice";
 import cartReducer from "./features/cartSlice";
 import { loginApi } from "../services/loginApi";
-import { productsApi } from "../services/products";
+import { productsApi } from "../services/productsApi";
 
 const rootReducer = combineReducers({
   user: userReducer,

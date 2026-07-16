@@ -54,7 +54,9 @@ export const cartSlice = createSlice({
         state.cartProducts.push(action.payload);
       }
 
-      Cookies.set("cart", JSON.stringify(state.cartProducts));
+      Cookies.set("cart", JSON.stringify(state.cartProducts), {
+        maxAge: 34560000,
+      });
     },
     decreaseQuantity: (state, action: PayloadAction<ICart>) => {
       const product = state.cartProducts.find(

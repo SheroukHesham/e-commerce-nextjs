@@ -14,7 +14,7 @@ import {
   useGetProductsQuery,
   useRemoveProductMutation,
   useUpdateProductMutation,
-} from "@/app/services/products";
+} from "@/app/services/productsApi";
 import { Modal } from "./Modal";
 import { IProduct } from "@/interfaces";
 import { Field } from "./ui/field";

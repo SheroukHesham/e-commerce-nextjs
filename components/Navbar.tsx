@@ -1,7 +1,7 @@
 "use client";
-import React, { HTMLAttributes, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ModeToggle } from "./ModeToggle";
-import { Heart, LucideMenu, Search, ShoppingCart, VanIcon } from "lucide-react";
+import { Heart, LucideMenu, Search, VanIcon } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import NavbarAvatar from "./NavbarAvatar";
