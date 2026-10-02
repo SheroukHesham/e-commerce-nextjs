@@ -5,16 +5,20 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(1 0 0);
+  --background: oklch(100% 0.00011 271.152);
   --foreground: oklch(0.145 0 0);
-  --primary: hsl(127, 40%, 21%);
+  --primary: hsl(42, 59%, 45%);
   --primary-hover: hsl(129, 39%, 25%);
-  --secondary: hsl(38, 93%, 57%);
+  --primary-background: hsl(34, 100%, 95%);
   --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(38, 93%, 57%);
   --secondary-foreground: hsl(38, 13%, 13%);
   --muted: hsl(220, 13%, 91%);
   --destructive: hsl(359, 100%, 38%);
   --popover: hsl(0, 0%, 90%);
+  --section-background: hsl(34, 100%, 95%);
+  --section-foreground: hsl(42, 59%, 45%);
+  --title: rgb(59, 59, 59);
 }
 
 .dark {
@@ -28,6 +32,9 @@
   --muted: hsl(220, 13%, 91%);
   --destructive: hsl(359, 100%, 38%);
   --popover: hsl(0, 0%, 90%);
+  --section-background: #fff3e3;
+  --section-foreground: #b88e2f;
+  --title: hsl(0, 0%, 23%);
 }
 
 @theme inline {
@@ -35,10 +42,18 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
+  --color-primary-background: var(--primary-background);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary-foreground: var(--secondary-foreground);
   --color-muted: var(--muted);
   --color-primary-hover: var(--primary-hover);
   --color-destructive: var(--destructive);
   --color-popover: var(--popover);
+  --color-section-background: var(--section-background);
+  --color-section-foreground: var(--section-foreground);
+  --color-title: var(--title);
+}
+
+html {
+  font-family: "Poppins";
 }

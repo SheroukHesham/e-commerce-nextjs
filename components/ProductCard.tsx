@@ -15,7 +15,7 @@ const ProductCard = ({ product }: IProps) => {
 
   return (
     <Link
-      className="flex w-full max-w-62.5 flex-col rounded-lg  bg-[#e2e2e239] cursor-pointer p-1"
+      className="flex w-full max-w-72 flex-col rounded-lg  bg-[#e2e2e239] cursor-pointer p-1 shadow"
       href={`/${documentId}`}
     >
       <div

@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import StoreProvider from "./StoreProvider";
 import { ICart } from "./lib/features/cartSlice";
 import InternetStatusProvider from "./providers/InternetStatusProvider";
+import Navbar from "@/components/Navbar";
 
 const parseCartCookie = (raw: string | undefined): ICart[] => {
   if (!raw) return [];
@@ -59,6 +60,8 @@ export default async function RootLayout({
               enableSystem
               disableTransitionOnChange
             >
+              <Navbar />
+
               {children}
             </ThemeProvider>
           </InternetStatusProvider>

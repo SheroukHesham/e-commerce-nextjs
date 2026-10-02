@@ -1,4 +1,45 @@
-import { IEditProduct, ILogin, IProduct } from "@/interfaces";
+import { IEditProduct, ILogin, INavItem, IProduct } from "@/interfaces";
+
+export const Nav_Items: INavItem[] = [
+  { label: "Home", href: "/" },
+  { label: "Shop", href: "/" },
+  { label: "About", href: "/" },
+  { label: "Contact", href: "/" },
+];
+
+export const LANDING_BROWSE: { src: string[]; title: string }[] = [
+  {
+    title: "Dining",
+    src: ["landing-dining-1", "landing-dining-2"],
+  },
+  {
+    title: "Living",
+    src: ["living_room-1", "living-room-2"],
+  },
+  {
+    title: "Bedroom",
+    src: ["bedroom-1", "bedroom-2"],
+  },
+];
+
+export const LANDING_CAROUSEL: { src: string; to: string }[] = [
+  {
+    src: "landing-carousel-1",
+    to: "",
+  },
+  {
+    src: "landing-carousel-2",
+    to: "",
+  },
+  {
+    src: "landing-carousel-1",
+    to: "",
+  },
+  {
+    src: "landing-carousel-2",
+    to: "",
+  },
+];
 
 export const LoginData: ILogin[] = [
   {

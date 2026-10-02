@@ -1,3 +1,8 @@
+export interface INavItem {
+  label: string;
+  href: string;
+}
+
 export interface IProduct {
   documentId?: string;
   title: string;

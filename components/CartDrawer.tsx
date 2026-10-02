@@ -48,17 +48,18 @@ export function CartDrawer({ cart }: { cart: ICart[] }) {
     >
       <DrawerTrigger
         render={
-          <Button
-            variant={"link"}
-            className="relative flex items-center px-2 py-3 hover:no-underline"
-          >
+          <Button className="relative flex items-center px-2 py-3 hover:bg-transparent  bg-transparent shadow-none  ">
             <ShoppingCart
               aria-hidden="true"
-              className="size-5 "
+              className="size-6 text-black"
               opacity={0.9}
               cursor={"pointer"}
             />
-            <div className="absolute top-0 right-0 text-sm">{cart.length}</div>
+            {cart.length > 0 && (
+              <div className="absolute top-0 right-0 text-sm text-black">
+                {cart.length}
+              </div>
+            )}
           </Button>
         }
       />
@@ -89,32 +90,32 @@ export function CartDrawer({ cart }: { cart: ICart[] }) {
                         <div className="flex items-center gap-2 ">
                           <div className="text-center">Quantity: </div>
                           <div className="grid grid-cols-3 border border-gray-400 rounded-full min-w-32 ">
-                            <span className=" rounded-l-full hover:bg-gray-300 items-center flex justify-center cursor-pointer ">
-                              <Plus
-                                size={15}
-                                onClick={() => {
-                                  dispatch(
-                                    addToCart({
-                                      product: product,
-                                      quantity: 1,
-                                    }),
-                                  );
-                                }}
-                              />
+                            <span
+                              className=" rounded-l-full hover:bg-gray-300 text-center cursor-pointer items-center flex justify-center"
+                              onClick={() => {
+                                dispatch(
+                                  decreaseQuantity({
+                                    product: product,
+                                    quantity: 1,
+                                  }),
+                                );
+                              }}
+                            >
+                              <Minus size={15} />
                             </span>
                             <span className="text-center">{quantity}</span>
-                            <span className=" rounded-r-full hover:bg-gray-300 text-center cursor-pointer items-center flex justify-center">
-                              <Minus
-                                size={15}
-                                onClick={() => {
-                                  dispatch(
-                                    decreaseQuantity({
-                                      product: product,
-                                      quantity: 1,
-                                    }),
-                                  );
-                                }}
-                              />
+                            <span
+                              className=" rounded-r-full hover:bg-gray-300 items-center flex justify-center cursor-pointer "
+                              onClick={() => {
+                                dispatch(
+                                  addToCart({
+                                    product: product,
+                                    quantity: 1,
+                                  }),
+                                );
+                              }}
+                            >
+                              <Plus size={15} />
                             </span>
                           </div>
                         </div>
