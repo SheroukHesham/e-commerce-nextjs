@@ -1,22 +1,17 @@
-import cloudinaryLoader from "@/lib/cloudinary";
+import { INavItem } from "@/interfaces";
 import { BreadCrumb } from "./BreadCrumb";
 
 interface IProps {
   title: string;
+  breadcrumbs: INavItem[];
 }
-const HeaderBanner = ({ title }: IProps) => {
-  console.log(process.env.NEXT_PUBLIC_CLOUDINARY_BASE_URL + "/header-banner");
+const HeaderBanner = ({ title, breadcrumbs }: IProps) => {
   return (
     <div
       className={`w-full  lg:h-90 flex flex-col items-center justify-center bg-no-repeat bg-cover bg-[url('https://res.cloudinary.com/w1gzdawt/image/upload//header-banner')]`}
     >
       <h1 className="font-medium text-[48px] mb-2">{title}</h1>
-      <BreadCrumb
-        sortedNavList={[
-          { label: "Home", href: "/" },
-          { label: "Shop", href: "/shop" },
-        ]}
-      />
+      <BreadCrumb sortedNavList={breadcrumbs} />
     </div>
   );
 };

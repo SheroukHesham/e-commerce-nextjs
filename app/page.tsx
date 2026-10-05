@@ -1,4 +1,5 @@
 import CldImage from "@/components/CldImage";
+import DisplayProducts from "@/components/DisplayProducts";
 import Footer from "@/components/Footer";
 import { LandingCarousel } from "@/components/LandingCarousel";
 import { LandingGallery } from "@/components/LandingGallery";
@@ -9,25 +10,25 @@ import { LANDING_BROWSE } from "@/data";
 import { IProduct } from "@/interfaces";
 import { ArrowRight } from "lucide-react";
 
-export async function getProducts() {
-  //TODO:limit to 8
-  const res = await fetch(`${process.env.BASE_URL}/products?populate=*`, {
-    headers: {},
-  });
-  if (!res.ok) {
-    throw new Error("failed to fetch data");
-  }
+// export async function getProducts() {
+//   //TODO:limit to 8
+//   const res = await fetch(`${process.env.BASE_URL}/products?populate=*`, {
+//     headers: {},
+//   });
+//   if (!res.ok) {
+//     throw new Error("failed to fetch data");
+//   }
 
-  const { data } = await res.json();
-  return data;
-}
+//   const { data } = await res.json();
+//   return data;
+// }
 
 export default async function Home() {
-  const products: IProduct[] = await getProducts();
+  // const products: IProduct[] = await getProducts();
 
-  const renderProducts = products?.map((product, idx) => {
-    return <ProductCard product={product} key={idx} />;
-  });
+  // const renderProducts = products?.map((product, idx) => {
+  //   return <ProductCard product={product} key={idx} />;
+  // });
 
   const renderBrowseItems = LANDING_BROWSE.map((item, idx) => {
     return (
@@ -79,8 +80,7 @@ export default async function Home() {
         </h1>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 justify-between  mx-auto w-full items-center gap-x-5 gap-y-5  mt-5 px-5">
-          {renderProducts}
-          {renderProducts}
+          <DisplayProducts />
         </div>
         <Button size={"md"} variant={"outline"}>
           Show More

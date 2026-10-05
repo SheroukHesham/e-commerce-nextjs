@@ -74,7 +74,7 @@ export function BreadCrumb({ sortedNavList }: IProps) {
     } else {
       return sortedNavList.map((item, idx) => {
         return (
-          <>
+          <div key={idx} className="flex items-center">
             <BreadcrumbItem>
               <BreadcrumbLink
                 render={
@@ -88,7 +88,7 @@ export function BreadCrumb({ sortedNavList }: IProps) {
               />
             </BreadcrumbItem>
             {idx !== sortedNavList.length - 1 && <BreadcrumbSeparator />}
-          </>
+          </div>
         );
       });
     }

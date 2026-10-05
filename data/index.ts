@@ -1,4 +1,6 @@
 import { IEditProduct, ILogin, INavItem, IProduct } from "@/interfaces";
+import { LucideIcon } from "lucide-react";
+import { Trophy, BadgeCheck, Truck, Headset } from "lucide-react";
 
 export const Nav_Items: INavItem[] = [
   { label: "Home", href: "/" },
@@ -34,6 +36,33 @@ export const FOOTER_ITEMS: {
       { name: "Enter Your Email Address", href: "/" },
       { name: "SUBSCRIBE", href: "/" },
     ],
+  },
+];
+
+export const SHOP_BANNER: {
+  title: string;
+  description: string;
+  icon: LucideIcon;
+}[] = [
+  {
+    title: "High Quality",
+    description: "crafted from top materials",
+    icon: Trophy,
+  },
+  {
+    title: "Warranty Protection",
+    description: "over 2 years",
+    icon: BadgeCheck,
+  },
+  {
+    title: "Free Shipping",
+    description: "order over $150",
+    icon: Truck,
+  },
+  {
+    title: "24/7 Support",
+    description: "Dedicated Support",
+    icon: Headset,
   },
 ];
 
