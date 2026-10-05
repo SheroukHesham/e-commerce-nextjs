@@ -7,7 +7,7 @@ import ProductCard from "@/components/ProductCard";
 import { Button } from "@/components/ui/button";
 import { LANDING_BROWSE } from "@/data";
 import { IProduct } from "@/interfaces";
-import { ArrowRight, ArrowRightIcon } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export async function getProducts() {
   //TODO:limit to 8
@@ -59,12 +59,12 @@ export default async function Home() {
   return (
     <div className="flex flex-col gap-14">
       <LandingHeader />
-      <section className="mx-auto w-full h-171">
+      <section className="mx-auto w-full min-h-171">
         <div className="flex flex-col items-center justify-center mb-15.5">
           <h1 className="capitalize font-bold pt-2 text-[32px] text-title">
             browse the range
           </h1>
-          <h3 className="text-[20px] text-[#666666]">
+          <h3 className="text-[20px] text-[#666666] text-center">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </h3>
         </div>
@@ -73,12 +73,12 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="mx-auto w-309 h-271  items-center gap-y-7 flex flex-col">
+      <section className="mx-auto max-w-309 min-h-271  items-center gap-y-7 flex flex-col">
         <h1 className="capitalize font-bold pt-2 text-[32px] text-title">
           our products
         </h1>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 justify-between  mx-auto w-full items-center gap-y-5  mt-5 px-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 justify-between  mx-auto w-full items-center gap-x-5 gap-y-5  mt-5 px-5">
           {renderProducts}
           {renderProducts}
         </div>
@@ -87,9 +87,9 @@ export default async function Home() {
         </Button>
       </section>
 
-      <section className=" h-167.5 bg-[#FCF8F3] flex gap-x-8 items-center py-11">
-        <section className="h-full flex flex-col min-w-105.5 items-start justify-center  ml-25">
-          <h1 className="font-bold text-[40px] leading-none text-[#3A3A3A] tracking-tight mb-1.75">
+      <section className=" max-h-167.5 bg-[#FCF8F3] flex flex-col lg:flex-row gap-y-5 gap-x-8 items-center py-11 overflow-hidden">
+        <section className="h-full flex flex-col min-w-105.5 items-center lg:items-start justify-center  lg:ml-25">
+          <h1 className="font-bold text-[40px] leading-none text-[#3A3A3A] tracking-tight mb-1.75 text-center md:text-left">
             50+ Beautiful rooms inspiration
           </h1>
           <h3 className="text-[16px] font-medium text-[#616161] mb-6.25 max-w-80">
@@ -102,8 +102,8 @@ export default async function Home() {
         </section>
 
         <div className="overflow-x-clip ">
-          <section className="mx-auto flex w-full max-w-6xl gap-x-6  overflow-x-hidden ">
-            <div className="relative min-w-101 h-145.5 shrink-0 ">
+          <section className="mx-auto flex flex-col md:flex-row sm:items-center gap-y-5 w-full max-w-6xl gap-x-6  overflow-x-hidden ">
+            <div className="relative max-w-101 max-h-145.5 lg:h-145.5 lg:w-101 shrink-0 ">
               <CldImage alt="" src="slide-main" fill sizes="" />
               <div className="relative flex w-full h-full items-end p-6">
                 <div className="p-8 bg-white/72">
@@ -122,7 +122,8 @@ export default async function Home() {
                 </Button>
               </div>
             </div>
-            <div className="mr-[calc(50%-50vw)] min-w-0 flex-1 ">
+
+            <div className="hidden lg:block md:mr-[calc(50%-50vw)] min-w-0  flex-1 ">
               <LandingCarousel />
             </div>
           </section>

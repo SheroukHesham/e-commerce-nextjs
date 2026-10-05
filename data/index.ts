@@ -2,9 +2,39 @@ import { IEditProduct, ILogin, INavItem, IProduct } from "@/interfaces";
 
 export const Nav_Items: INavItem[] = [
   { label: "Home", href: "/" },
-  { label: "Shop", href: "/" },
+  { label: "Shop", href: "/shop" },
   { label: "About", href: "/" },
   { label: "Contact", href: "/" },
+];
+
+export const FOOTER_ITEMS: {
+  title: string;
+  links: { name: string; href: string }[];
+}[] = [
+  {
+    title: "Links",
+    links: [
+      { name: "Home", href: "/" },
+      { name: "Shop", href: "/shop" },
+      { name: "About", href: "/" },
+      { name: "Contact", href: "/" },
+    ],
+  },
+  {
+    title: "Help",
+    links: [
+      { name: "Payment Options", href: "/" },
+      { name: "Returns", href: "/" },
+      { name: "Privacy Policy", href: "/" },
+    ],
+  },
+  {
+    title: "Newsletter",
+    links: [
+      { name: "Enter Your Email Address", href: "/" },
+      { name: "SUBSCRIBE", href: "/" },
+    ],
+  },
 ];
 
 export const LANDING_BROWSE: { src: string[]; title: string }[] = [

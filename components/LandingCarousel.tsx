@@ -45,7 +45,7 @@ export function LandingCarousel() {
           slidesToScroll: 1,
           loop: true,
         }}
-        className="w-full"
+        className="w-full "
       >
         <CarouselContent className="-ml-6 ">
           {LANDING_CAROUSEL.map((item, index) => (

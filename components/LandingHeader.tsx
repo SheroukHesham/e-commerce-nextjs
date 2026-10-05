@@ -13,7 +13,7 @@ const LandingHeader = () => {
       />
 
       <div className="relative z-10 h-full flex flex-col items-end justify-center  px-14.5">
-        <div className="w-160 h-110 bg-section-background flex flex-col justify-center rounded-lg px-10 py-15 gap-y-4">
+        <div className="max-w-160 h-110 bg-section-background flex flex-col justify-center rounded-lg px-10 py-15 gap-y-4">
           <h3 className="text-[#333333] font-bold text-lg">New Arrival</h3>
           <h1 className="text-4xl font-bold text-section-foreground md:text-6xl ">
             Discover Our New Collection
