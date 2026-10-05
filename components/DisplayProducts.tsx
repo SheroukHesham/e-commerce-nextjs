@@ -29,6 +29,15 @@ async function DisplayProducts({ page = 1 }: { page?: number }) {
         {products?.map((product, idx) => (
           <ProductCard product={product} key={idx} />
         ))}
+        {products?.map((product, idx) => (
+          <ProductCard product={product} key={idx} />
+        ))}
+        {products?.map(
+          (product, idx) =>
+            idx !== products.length - 1 && (
+              <ProductCard product={product} key={idx} />
+            ),
+        )}
       </div>
 
       <PagePagination currentPage={page} totalPages={2} />

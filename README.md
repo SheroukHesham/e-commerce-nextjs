@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
+
+# E-commerce Website
+
+**A furniture store website**
+
+![Next.js](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-6-3178C6?logo=typescript&logoColor=white)
+![Strapi](https://img.shields.io/badge/Strapi&logoColor=white)
+
+<div align="center">
+  <img src="docs/screenshots/landing.png" width="400px" alt="landing page">
+  <img src="docs/screenshots/shop.png" width="400px" alt="shop page">
+</div>
+
+</div>
+
+---
+
+## Overview
+
+**E-commerce Furniture Website** This website provides the users with a smooth user experience through every step to purchase their furniture all the way from browsing through the products, comparing products by their materials, sizes, description and prices, adding the products they like to their carts and finally to checking out the products.
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- **Node.js** 22 LTS (or 20.19+). The toolchain (Vite 8, ESLint 10, TypeScript 6) requires a recent Node version.
+- **npm** 10+
+- **Git**
+
+### Installation
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/SheroukHesham/e-commerce-nextjs
+cd e-commerce-nextjs
+
+# 2. Install dependencies
+npm install
+```
+
+### Run in development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This starts the Vite dev server (`http://localhost:5123`).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Start Your Strapi Server
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run develop
+```
 
-## Learn More
+This starts Strapi server(`http://localhost:1337`).
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License and Author
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Private project, all rights reserved.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built by **Sherouk**.
